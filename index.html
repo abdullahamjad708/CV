@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdullah Amjad - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .page {
+      width: 794px;
+      min-height: 1123px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .sidebar {
+      width: 270px;
+      min-height: 1123px;
+      background-color: #dce6f0;
+      padding: 30px 22px 30px 22px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .photo-box {
+      width: 175px;
+      height: 175px;
+      border: 1.5px solid #aaaaaa;
+      overflow: hidden;
+      margin: 30px;
+      flex-shrink: 0;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* SIDEBAR SECTION TITLE */
+    .sidebar-section-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      padding-bottom: 0;
+    }
+
+    .sidebar-divider {
+      border: none;
+      border-top: 3px solid #888888;
+      margin-bottom: 14px;
+    }
+
+    /* CONTACT */
+    .contact-block {
+      margin-bottom: 26px;
+    }
+
+    .contact-block p {
+      font-size: 12px;
+      color: #111111;
+      line-height: 1.8;
+    }
+
+    .contact-block a {
+      color: #1a5fa8;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    /* SKILLS */
+    .skills-block {
+      margin-bottom: 10px;
+    }
+
+    .skills-list {
+      list-style: disc;
+      padding-left: 16px;
+    }
+
+    .skills-list li {
+      font-size: 12.5px;
+      color: #111111;
+      line-height: 2.0;
+    }
+
+    /* ── RIGHT MAIN CONTENT ── */
+    .main {
+      flex: 1;
+      padding: 50px 25px 25px 25px;
+      background-color: #ffffff;
+    }
+
+    /* NAME & TITLE */
+    .name-block {
+      margin-bottom: 6px;
+    }
+
+    .name-block h1 {
+      font-family: 'arial', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 4.5px;
+      line-height: 1.1;
+      margin: 40px 27.5px;
+    }
+
+    .name-block .role {
+      font-size: 13px;
+      color: #333333;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin: 20px 190px 50px 190px;
+      font-style: normal;
+    }
+
+    .main-divider {
+      border: none;
+      border-top: 3px solid #888888;
+      margin-bottom: 24px;
+    }
+
+    /* MAIN SECTION TITLE */
+    .main-section-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    /* EDUCATION */
+    .edu-block {
+      margin-bottom: 6px;
+    }
+
+    .edu-degree {
+      font-size: 13px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .edu-degree::before {
+      content: "•";
+      font-size: 13px;
+      color: #000000;
+      flex-shrink: 0;
+      margin-top: 0px;
+    }
+
+    .edu-institution {
+      font-size: 13px;
+      color: #333333;
+      font-style: italic;
+      line-height: 1.6;
+      padding-left: 16px;
+    }
+
+    /* PROJECTS */
+    .projects-block {
+      margin-top: 4px;
+    }
+
+    .project-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #111111;
+      line-height: 1.6;
+    }
+
+    .project-item::before {
+      content: "•";
+      font-size: 13px;
+      color: #000000;
+      flex-shrink: 0;
+      margin-top: 0px;
+    }
+
+    .project-item strong {
+      font-weight: 700;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- Photo -->
+      <div class="photo-box">
+        <img src="photo.jpeg"/>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="contact-block">
+       
+        <div class="sidebar-section-title">Contact</div>
+        
+        <p>+92 370 762 3429</p>
+        <p><a href="mailto:m.abdullah7089000@gmail.com">m.abdullah7089000@gmail.com</a></p>
+        <p style="margin-top:6px;">Kent housing Society, Chenab<br>Rangers Rd, Sahowali, Sialkot,<br>Pakistan</p>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="skills-block">
+        <hr class="sidebar-divider"/>
+        <div class="sidebar-section-title">Skills</div>
+        <ul class="skills-list">
+          <li>Communication</li>
+          <li>Prompt engineering</li>
+          <li>C++</li>
+          <li>OOP</li>
+          <li>Python</li>
+          <li>MS – Office</li>
+        </ul>
+         <hr class="sidebar-divider"/>
+      </div>
+
+    </div>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <div class="main">
+
+      <!-- NAME -->
+      <div class="name-block">
+        <h1>ABDULLAH AMJAD</h1>
+        <div class="role">AI Enthusiast</div>
+      </div>
+
+      <hr class="main-divider"/>
+
+      <!-- EDUCATION -->
+      <div class="main-section-title">Education</div>
+      <div class="edu-block">
+        <div class="edu-degree">BS Artificial Intelligence</div>
+        <div class="edu-institution">University of Management and Technology (UMT), Sialkot<br>2023 – Present (Currently in 6th Semester)</div>
+      </div>
+
+      <hr class="main-divider" style="margin-top:20px;"/>
+
+      <!-- PROJECTS -->
+      <div class="main-section-title">Projects</div>
+      <div class="projects-block">
+
+        <div class="project-item">
+          <span><strong>AI Powered E-Commerce RAG System:</strong> AI integrated groq API with RAG pipeline and implemented retrieval-RAG base response</span>
+        </div>
+
+        <div class="project-item">
+          <span><strong>Voice Chatbot:</strong> AI voice chatbots helps in automating calls, like sales calling agents, customer care calling agents, etc.</span>
+        </div>
+
+        <div class="project-item">
+          <span><strong>AI Chatbots:</strong> Developed an intent-based chatbot utilizing Rasa/Lang Chain to address common customer inquiries, resulting in a 40% reduction in workload for human agents.</span>
+        </div>
+
+        <div class="project-item">
+          <span><strong>Handwritten Digit Sequence Recognizer:</strong> Built a deep learning model with CNN's to recognize handwritten digit sequences, achieving 97% accuracy on test data</span>
+        </div>
+
+        <div class="project-item">
+          <span><strong>Student Score Prediction:</strong> Regression models were used to forecast student performance, allowing for early intervention methods with an 85% certainty of prediction.</span>
+        </div>
+
+        <div class="project-item">
+          <span><strong>Customer Segmentation:</strong> A 22% increase in customer engagement was achieved by designing an unsupervised clustering solution for targeted marketing.</span>
+        </div>
+
+        <div class="project-item">
+          <span><strong>Building Products with AI:</strong> Developed AI-driven products that integrate machine learning and automation to solve real-world problems and enhance user experience.</span>
+        </div>
+
+      </div>
+
+      <hr class="main-divider" style="margin-top:16px;"/>
+
+    </div>
+  </div>
+</body>
+</html>
